@@ -1,14 +1,16 @@
-package entity;
+package de.telran.processor.entity;
 
 import java.awt.image.BufferedImage;
 
 public class DownloadedImage {
     private BufferedImage image;
     private boolean isSucсessful;
+    private ImageDescriptor descriptor;
 
-    public DownloadedImage(BufferedImage image, boolean isSucсessful) {
+    public DownloadedImage(BufferedImage image, boolean isSucсessful, ImageDescriptor descriptor) {
         this.image = image;
         this.isSucсessful = isSucсessful;
+        this.descriptor = descriptor;
     }
 
     public BufferedImage getImage() {
@@ -17,5 +19,9 @@ public class DownloadedImage {
 
     public boolean isSucсessful() {
         return isSucсessful;
+    }
+
+    public ImageDescriptor getDescriptor() {
+        return descriptor;
     }
 }
